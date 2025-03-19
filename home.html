@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My World</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Section Animation */
+        .fadeInSection {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .fadeInSectionDelayed {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+
+        .fadeInSectionLong {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: #f4f4f4;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #skills h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .skill-item {
+            width: 250px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .skill-item p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        /* Photo Section */
+        .photo-section {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .photo-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .photo-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .photo-item {
+            width: 30%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .photo-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Video Section */
+        .video-section {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .video-container:hover iframe {
+            transform: scale(1.05);
+        }
+
+        /* Logo Icon Styling */
+        #logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        #logo-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #333;
+            object-fit: cover;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .photo-gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .photo-item {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            #logo-container img {
+                width: 80px;
+                height: 80px;
+            }
+
+            /* Mobile Nav */
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                width: 100%;
+                background-color: #333;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav button {
+                display: block;
+                font-size: 30px;
+                background: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                font-size: 18px;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Welcome to My World!</h1>
+            <p>Your go-to place to learn more about me</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <button onclick="toggleMenu()">&#9776;</button>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about" class="about fadeInSection">
+        <div class="container">
+            <div class="about-info">
+                <h2>About Me</h2>
+                <p>Hello! I'm Betul Polat, a passionate Computer Scientist with a love for working, sports, and nature walking. Welcome to my personal website where you can learn more about my journey, skills, and how to get in touch with me!</p>
+            </div>
+            <div class="about-photo">
+                <img src="photo.JPG" alt="Your Photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills fadeInSection">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skill-list">
+                <div class="skill-item">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, ASP.NET</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Graphic Design</h3>
+                    <p>Adobe Photoshop, Figma, OpenSCAD, Blender, Tinkercad</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Java Programming</h3>
+                    <p>Java, SQL, IntelliJIDEA, Scene Builder, Virtual Box - Ubuntu, Eclipse, Sublime Text, VSCode, Android Studio</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Python Programming</h3>
+                    <p>Colab, Matlab, Jupyter, Kaggle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section (YouTube Channel Embed) -->
+    <section id="video" class="video-section fadeInSectionDelayed">
+        <div class="container">
+            <button class="channel-button" onclick="window.location.href='https://youtube.com/@codeninja-8?si=bXyR5ANUORvcirNX'">
+                Check Out My YouTube Channel: Java Programming for Beginners
+            </button>
+            <div id="logo-container">
+                <!-- Java Channel Logo -->
+                <img src="code.JPG" alt="Java Programming Logo" class="logo-icon">
+            </div>
+            <p>Welcome to my Java Programming for Beginners channel, where you can learn Java from scratch in an easy and fun way.</p>
+            <div class="video-container">
+                <!-- Embed YouTube Video -->
+                <iframe src="https://www.youtube.com/embed/K_3_soYM7V4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact fadeInSectionLong">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to email me at <a href="mailto:smyrbetul77@gmail.com">smyrbetul77@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="footerYear"></span> Betul Polat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to get the current year and update both top and footer
+        function updateYear() {
+            const yearElementTop = document.getElementById('currentYear');
+            const yearElementFooter = document.getElementById('footerYear');
+            const currentYear = new Date().getFullYear();
+            yearElementTop.textContent = currentYear;
+            yearElementFooter.textContent = currentYear;
+        }
+
+        // Update the year on page load
+        window.onload = function() {
+            updateYear();  // Set current year in both top info and footer
+        };
+
+        // Toggle mobile menu
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

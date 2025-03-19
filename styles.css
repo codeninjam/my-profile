@@ -1,0 +1,413 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #6e7dff, #ff69b4, #ff7e5f); /* Professional gradient background */
+    color: #fff;
+    animation: backgroundAnimation 15s infinite alternate; /* Smooth background animation */
+    padding: 0;
+    margin: 0;
+}
+
+/* Container Class for Page Layout */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for header */
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 5px solid #fff;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+header p {
+    font-size: 1.2em;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #333;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 3s ease-out forwards;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #feb47b; /* Brighter accent color */
+    transform: scale(1.1);  /* Slightly enlarges the link when hovered */
+}
+
+/* About Me Section Styles */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for about */
+    padding: 60px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    opacity: 0;
+    animation: slideInLeft 2s ease-out forwards;
+}
+
+.about-info {
+    width: 60%;
+    padding-right: 40px;
+}
+
+.about-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.about-info p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.about-photo {
+    width: 35%;
+}
+
+.about-photo img {
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid #ff7e5f;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+/* Skills Section Styles */
+.skills {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 60px 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.skill-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.skill-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 23%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideInUp 1s ease-out forwards;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.skill-item:hover {
+    transform: translateY(-10px); /* Moves the item up */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow when hovered */
+}
+
+.skill-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.skill-item p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Contact Section Styles */
+.contact {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 60px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 3s ease-out forwards;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.contact a {
+    color: #ff7e5f;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Publications and Certificates Section */
+/* Publications Section */
+.publications {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-out forwards;
+}
+
+.publications h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;  /* Change the color of the heading */
+}
+
+.publications ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.publications ul li {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #444;  /* Change the text color of the list items */
+}
+
+.publications ul li a {
+    color: #ff7e5f;
+    text-decoration: none;
+}
+
+.publications ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Certificates Section */
+.certificates {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-out forwards;
+}
+
+.certificates h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;  /* Change the color of the heading */
+}
+
+.certificates ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.certificates ul li {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #444;  /* Change the text color of the list items */
+}
+
+.certificates ul li a {
+    color: #ff7e5f;
+    text-decoration: none;
+}
+
+.certificates ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
+.channel-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline */
+    font-size: 18px; /* Text size */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-bottom: 20px; /* Space below the button */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    animation: slideIn 1s ease-out forwards; /* Animation when appearing */
+}
+
+/* Button Hover Effect */
+.channel-button:hover {
+    background-color: #45a049; /* Darker green when hovered */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
+}
+
+/* Button Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px); /* Start from below */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* End at original position */
+        opacity: 1;
+    }
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background Animation */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #6e7dff, #ff69b4, #ff7e5f);
+    }
+    50% {
+        background: linear-gradient(135deg, #4caf50, #ffeb3b, #ff5722);
+    }
+    100% {
+        background: linear-gradient(135deg, #6e7dff, #ff69b4, #ff7e5f);
+    }
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-info {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .about-photo {
+        width: 100%;
+    }
+
+    .skill-list {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .skill-item {
+        width: 100%;
+    }
+
+    .publications ul, .certificates ul {
+        text-align: left;
+        padding-left: 20px;
+    }
+}
